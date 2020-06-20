@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+       xmlns:f="http://java.sun.com/jsf/core" 
+       xmlns:h="http://java.sun.com/jsf/html"
+       xmlns:ui="http://java.sun.com/jsf/facelets"> 
+
+<h:head>
+	<title>Login Page</title>
+   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"></link>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" >
+    </link>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+	</link>
+	<link rel="stylesheet" type="text/css" href="css/mystyle.css"></link>
+</h:head>
+<h:body>
+<div class="container">
+	<div class="d-flex justify-content-center h-100">
+		<div class="card">
+			<div class="card-header">
+				<h3>Sign In</h3>
+			</div>
+			<div class="card-body">
+				<h:form>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
+						<h:inputText class="form-control" value="#{userController.user_name}" placeholder="username"
+							required="true" requiredMessage="Username field must not be empty"></h:inputText>
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-mail-bulk"></i></span>
+						</div>
+						<h:inputText class="form-control" value="#{userController.user_email}" placeholder="email"
+							required="true" requiredMessage="Email field must not be empty"></h:inputText>
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+						</div>
+						<h:inputSecret class="form-control" value="#{userController.user_password}" placeholder="password"
+							required="true" requiredMessage="Password field must not be empty"></h:inputSecret>
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+						</div>
+						<h:inputSecret class="form-control" value="#{userController.user_password}" placeholder="confirm your password"
+							required="true" requiredMessage="Password field must be confirmed"></h:inputSecret>
+					</div>
+					<div class="form-group">
+						<h:commandButton action="#{userController.signup()}" value="Sign-up" class="btn float-right login_btn"/>
+					</div>
+				</h:form>
+			</div>
+			<div class="card-footer">
+				<div class="d-flex justify-content-center links">
+					Already have an account?<a href="#">Sign In</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</h:body>
+</html>
