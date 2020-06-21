@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:web="http://xmlns.jcp.org/xml/ns/javaee">
+<web-app>
   <display-name>Archetype Created Web Application</display-name>
-  <context-param>
-    <param-name>javax.faces.PROJECT_STAGE</param-name>
-    <param-value>Development</param-value>
-  </context-param>
-  <session-config>
+   <context-param>
+        <param-name>javax.faces.DEFAULT_SUFFIX</param-name>
+        <param-value>Developpement</param-value>
+    </context-param>
+    <session-config>
     <session-timeout>30</session-timeout>
   </session-config>
-  <welcome-file-list>
-    <welcome-file>faces/signup.xhtml</welcome-file>
-  </welcome-file-list>
+   <!-- Welcome page -->
+    <welcome-file-list>
+        <welcome-file>home.xhtml</welcome-file>
+    </welcome-file-list>
+
+    
 </web-app>
