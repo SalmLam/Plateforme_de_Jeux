@@ -21,9 +21,9 @@ create table player_info (
 	constraint fk_party foreign key (game_id) references game(game_id));	
 create table tic_game (
 	game_id smallint unsigned not null, 
-	current_player_id smallint unsigned not null,
-	next_player_id smallint unsigned,
+	player1_id smallint unsigned not null,
+	player2_id smallint unsigned,
 	pending smallint default 0,
-	constraint fk_current_player foreign key (current_player_id) references user(user_id), 
-	constraint fk_next_player foreign key (next_player_id) references user(user_id));
+	constraint fk_current_player foreign key (player1_id) references user(user_id), 
+	constraint fk_next_player foreign key (player2_id) references user(user_id));
 
